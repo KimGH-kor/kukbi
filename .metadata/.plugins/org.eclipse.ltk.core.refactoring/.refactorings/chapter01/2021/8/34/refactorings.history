@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;ch02.퀴즈3&apos; to &apos;큰수더하기&apos;&#x0D;&#x0A;- Original project: &apos;chapter01&apos;&#x0D;&#x0A;- Original element: &apos;ch02.퀴즈3&apos;&#x0D;&#x0A;- Renamed element: &apos;ch02.큰수더하기&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;퀴즈3&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;ch02{퀴즈3.java[퀴즈3" matchStrategy="1" name="큰수더하기" qualified="false" references="true" similarDeclarations="false" stamp="1629273099992" textual="false" version="1.0"/>
+</session>

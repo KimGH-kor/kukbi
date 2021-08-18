@@ -1,0 +1,44 @@
+package ch01;
+
+import java.util.Scanner;
+
+public class Hotel {
+	public static void main(String[] args) {
+		int[][] arr = new int[4][4];
+		Scanner sc = new Scanner(System.in);
+		int i = 0;
+		
+		
+		while(true) {
+			System.out.println("1.숙박 2.퇴실 3.숙박현황 4.종료");
+			i = sc.nextInt();
+			switch (i) {
+			case 1: //숙박
+				System.out.println("숙박을 원하는 객식을 입력해 주세요");
+				int room = sc.nextInt();
+				int x = (num%10)-1;
+				int y = (num/100)-1;
+				
+				if(arr[x][y] == 0) {
+					arr[x][y] = 1;
+				}else {
+					System.out.println("이미 숙박 중입니다.");
+				}
+				break;
+			case 2: //퇴실
+				break;
+			case 3: //숙박 현황
+				break;
+			case 4: //종료
+				break;
+		
+			}
+		}
+		
+	}
+}
+
+//숙박
+//호실 번호 입력하면 1로 바꿈
+
+

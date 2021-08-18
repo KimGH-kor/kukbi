@@ -1,0 +1,29 @@
+package ch01;
+
+import java.util.Scanner;
+
+public class Hotel {
+	public static void main(String[] args) {
+		int[][] arr = new int[4][4];
+		Scanner sc = new Scanner(System.in);
+		int i = 0;
+		
+		
+		while(true) {
+			System.out.println("1.¼÷¹Ú 2.Åð½Ç 3.¼÷¹ÚÇöÈ² 4.Á¾·á");
+			i = sc.nextInt();
+			switch (i) {
+			case 1: //¼÷¹Ú
+				break;
+			case 2: //¼÷¹Ú
+				break;
+			case 3: //¼÷¹Ú
+				break;
+			case 4: //¼÷¹Ú
+				break;
+		
+			}
+		}
+		
+	}
+}

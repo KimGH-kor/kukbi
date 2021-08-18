@@ -1,0 +1,75 @@
+package ch01;
+
+import java.util.Scanner;
+
+public class Hotel {
+	public static void main(String[] args) {
+		int[][] arr = new int[4][4];
+		Scanner sc = new Scanner(System.in);
+		int i = 0;
+		boolean re = true;
+		
+		while(re) {
+			System.out.println("1.숙박 2.퇴실 3.숙박현황 4.종료");
+			i = sc.nextInt();
+			switch (i) {
+			
+			case 1: //숙박
+				System.out.println("숙박을 원하는 객식을 입력해 주세요");
+				int in = sc.nextInt();
+				int x = (in%10)-1;//호실
+				int y = (in/100)-1;//층수
+				
+				if(arr[y][x] == 0) {
+					arr[y][x] = 1;
+					System.out.println(in+"방 예약이 완료되었습니다.");
+				}else {
+					System.out.println("이미 숙박 중입니다.");
+				}
+				break;
+				
+			case 2: //퇴실
+				System.out.println("퇴실을 원하는 객식을 입력해 주세요");
+				int out = sc.nextInt();
+				int x1 = (out%10)-1;
+				int y1 = (out/100)-1;
+				
+				if(arr[y1][x1] == 1) {
+					arr[y1][x1] = 0;
+					System.out.println(out+"방 퇴실이 완료되었습니다.");
+				}else {
+					System.out.println("이미 빈방입니다.");
+				}
+				break;
+			case 3: //숙박 현황
+				System.out.println("현재 숙박 현황은");
+				for(int j = 401; j != 104; j++) {
+					
+					System.out.print(j);
+					if(arr[(j/100)-1][(j%10)-1] == 0) {
+						System.out.print("(빈방) ");
+					}else {
+						System.out.print("(사용) ");
+					}
+					
+					if(j%10 == 4) {
+						j -=104;
+						System.out.println();
+					}
+				}
+					
+				break;
+			case 4: //종료
+				re = false;
+				break;
+		
+			}
+		}
+		
+	}
+}
+
+//숙박
+//호실 번호 입력하면 1로 바꿈
+
+

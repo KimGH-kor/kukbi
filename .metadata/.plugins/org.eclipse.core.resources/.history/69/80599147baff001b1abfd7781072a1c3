@@ -1,0 +1,132 @@
+package ch02;
+
+public class 퀴즈 {
+	public static void main(String[] args) {
+		//1. 정수 x가 짝수인지 홀수인지 판별하시오.
+		int x = 312;
+		if(x % 2 == 0) {
+			System.out.println("짝수입니다.");
+		}else {
+			System.out.println("홀수입니다.");
+		}
+		//2. 정수 x가 음수인지 양수인지 0인지 판별하시오.
+		if(x > 0) {
+			System.out.println("양수 입니다.");
+		}else {
+			System.out.println("음수 입니다.");
+		}
+		//3. 국어, 영어, 수학 점수를 kor, eng, math에 저장후 평균을 구하시오
+		int kor = 90;
+		int eng = 88;
+		int math = 100;
+		int aver = (kor+eng+math)/3;
+		System.out.println(aver);
+	//   그리고 평균점수에 따른 평점을 출력하시오 (if문 사용)
+	//   90이상 A, 80이상 B ... 60미만 F
+		if(aver > 90) {
+			System.out.println("학점 A");
+		}else if(aver >80) {
+			System.out.println("학점 B");
+		}else if(aver > 70) {
+			System.out.println("학점 C");
+		}else if(aver > 60) {
+			System.out.println("학점 D");
+		}else {
+			System.out.println("fail");
+		}
+		//4. 3번문제를 switch case 문으로 해결하시오.
+		switch(aver) {
+		case 90 :
+			
+		//5. 정수 x부터 시작해 0까지 차례로 감소하며 출력하시오. (while문 사용)
+			x = 10;
+			while(x>=0) {
+				System.out.print(x+" ");
+				x--;
+			}
+		}
+		//6. 5번 문제를 for문으로 해결하시오.
+		for(int i = 10; i >= 0; i--) {
+			System.out.println(i);
+		}
+		//7. 정수를 저장할 배열 10개를 생성후
+		// 1부터 10까지 정수를 차례대로 저장하시오.
+		int[] arr = new int[10];
+		
+		for(int i = 0; i < arr.length; i++) {
+			arr[i] = i;
+		}
+		//8. 정수를 저장할 배열 10개를 생성후
+		// 10부터 100까지 10씩 증가하는 값을 차례대로 저장하시오.
+		int[] arr1 = new int[10];
+		int num = 10;
+		for(int i = 0; i < 10; i++) {
+			arr1[i] = num;
+			num += 10;
+		}
+		//9. x단을 출력하시오.
+		x = 3;
+			for(int i = 1; i<10; i++) {
+				System.out.println(x+"*"+i+" = "+(x*i));
+			}
+		//10. 배열을 전달받아 배열의 합을 리턴하는 메소드(함수) getSum(int arr[])를 작성하시오
+		
+	}
+	public static int getSum(int[] arr) {
+		int sum;
+		for(int i = 0; i < arr.length-1; i++) {
+			sum += arr[i];
+		}
+		
+		return sum;
+	}
+}
+//<기본문제.>
+//
+//<난이도 업! 문제.>
+//1. 배열에서 최대값을 찾아 리턴하는 메소드를 작성하시오.
+//2. 배열의 최대값과 최소값을 제외한 평균을 구하는 메소드를 작성하시오.
+//3. 정수를 전달받아 소수인지 판별하여 참 거짓을 반환하는 메소드를 작성하시오.
+//4. 2~9단을 모두 출력하시오.
+//5. 시간을 의미하는 4자리 정수 x를 아래와 같이 변환하시오.
+//x = 1630
+//오후 16시 30분
+//x = 1030
+//오전 10시 30분 
+//
+//6. 아래와 같은 규칙으로 지하철 요금을 계산하라!
+//1~5 정거장까지 요금 600원
+//6~10 정거장까지 요금 700원
+//11정거장부터 2정거장당 50원씩 추가요금
+//정거장수 = 13
+//요금은 800원입니다.
+//
+//아래의 결과가 나올수 있도록 출력해보시오(7~10)
+//7.
+//x=5
+//*****
+//*****
+//*****
+//*****
+//*****
+//8. 
+//x=5
+//*****
+//-----
+//*****
+//-----
+//*****
+//9.
+//x=5
+//*-*-*
+//-*-*-
+//*-*-*
+//-*-*-
+//*-*-*
+//10.
+//x=5
+//*---*
+//-*-*-
+//--*--
+//-*-*-
+//*---*

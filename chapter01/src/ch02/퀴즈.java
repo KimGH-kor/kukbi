@@ -37,7 +37,7 @@ public class 퀴즈 {
 		}
 		//4. 3번문제를 switch case 문으로 해결하시오.
 		switch(aver/10) {
-		case 9, 10:
+		case 9: case 10:
 			System.out.println("학점 A");
 			break;
 		case 8 :

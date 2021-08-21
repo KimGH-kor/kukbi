@@ -1,6 +1,8 @@
 package ch03;
 
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -125,10 +127,9 @@ public class 퀴즈 {
 		//입력 : 13
 		//Down!
 		//입력 : 11
-		//정답입니다.
+		//정답입니다.		
+//		int q = (int)((Math.random()*100)+1);
 		
-		
-		//int q = (int)((Math.random()*100)+1);
 		int q = rd.nextInt(99)+1;
 		
 		while(true) {
@@ -149,14 +150,23 @@ public class 퀴즈 {
 		//game 1 : 5 7 21 44 45
 		//game 2 : 1 4 8 11 25 41
 		//game 3 : 3 4 14 16 31 39
-
-		int rott = sc.nextInt();
-		int[] arr = new int[5];
+		//해쉬셋
+		int lott = sc.nextInt();
+		int[] arr = new int[6];
+		
 		int game = 1;
-		while(rott > 0) {
-			for(int i = 0; i < 5; i++) {
-				arr[i] = rd.nextInt(45)+1;
+		while(lott > 0) {
+			HashSet<Integer> hash = new HashSet<Integer>();;
+			while(hash.size()<6) {
+				hash.add(rd.nextInt(45)+1);
 			}
+			int m = 0;
+			for(Integer i : hash) {
+				arr[m] = i;
+				m++;
+			}
+			
+			
 			Arrays.sort(arr);
 			
 			System.out.print("game "+ game +" : ");
@@ -165,10 +175,38 @@ public class 퀴즈 {
 			for(int i : arr) {
 				System.out.print(i+" ");
 			}
-			rott--;
+			lott--;
 			System.out.println();
+			
 			}
 		line();
+		//해쉬셋 안쓴거
+		int lotto = sc.nextInt();
+		int arr2[] = new int[6];
+		int game2 = 1;
+		
+		while(lotto > 0) {
+	         
+			System.out.print("game "+game2+" : ");
+	         game2++;
+	         
+	         for(int j = 0; j < arr2.length; j++) {
+	            arr2[j] = 1 + rd.nextInt(45); 
+	            //3중포문? 
+	            for(int k = 0;k < j;k++) {
+	               if(arr2[j] == arr2[k]) {
+	                  j--;
+	                  break;
+	               }
+	            }
+	         }
+	         Arrays.sort(arr2);
+	         for(int j=0;j<arr2.length;j++) {
+	            System.out.print(arr2[j]+" ");
+	         }
+	         System.out.println();
+	         lotto--;
+			}
 		}
 	public static void line() {
 		System.out.println("===================================");

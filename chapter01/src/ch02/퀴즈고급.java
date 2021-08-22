@@ -12,7 +12,7 @@ public class 퀴즈고급 {
 		Avg(arr);
 		//3. 정수를 전달받아 소수인지 판별하여 참 거짓을 반환하는 메소드를 작성하시오.
 		int x = 11;
-		Count(x);
+		System.out.println(Count(x));
 		//4. 2~9단을 모두 출력하시오.
 		for(int i = 2; i < 10; i++) {
 			for(int j = 1; j < 10; j++) {
@@ -155,8 +155,10 @@ public class 퀴즈고급 {
 	}
 	public static void Avg(int arr[]) {
 	int sum = 0;
+	int max = Max(arr);
+	int min = Min(arr);
 	for(int i = 0; i < arr.length; i++) {
-		if(arr[i] == Max(arr) || arr[i] == Min(arr)) {
+		if(arr[i] == max || arr[i] == min) {
 			continue;
 		}
 		sum += arr[i];
@@ -165,17 +167,12 @@ public class 퀴즈고급 {
 }
 
 	
-	public static void Count(int x) {
-		int count = 0;
+	public static String Count(int x) {
 		for(int i = 2; i < x; i++) {
 			if(x%i == 0) {
-				count++;
+				return "false";
 			}
 		}
-		if(count != 0) {
-			System.out.println("거짓");
-		}else {
-			System.out.println("참");
-		}
+		return "true";
 	}
 }

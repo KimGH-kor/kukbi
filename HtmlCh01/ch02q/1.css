@@ -1,0 +1,12 @@
+* {
+  list-style: none;
+  border: 0;
+  margin: 0;
+}
+h1 {
+  background-color: black;
+  color: white;
+}
+p {
+  color: blue;
+}

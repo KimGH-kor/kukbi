@@ -149,6 +149,7 @@ public class 퀴즈 {
 		int q = rd.nextInt(99)+1;
 		int updown = 0;
 		while(true) {
+			updown++;
 			int num = sc.nextInt();
 			if(num > q) {
 				System.out.println("Down!");
@@ -157,8 +158,7 @@ public class 퀴즈 {
 			}else {
 				System.out.println("정답입니다.");
 				break;
-			}
-			updown++;	
+			}	
 		}
 		if(updown < 5) {
 			System.out.println("축하합니다!! 5번의 기회 중 총 "+updown+"번의 선택으로 이기셨습니다.");

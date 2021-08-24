@@ -1,0 +1,21 @@
+package ch05;
+
+import java.util.Scanner;
+
+public class 성적처리프로그램 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		double[] avg = new double[];
+		
+		while(true) {
+			System.out.println("1.입력 2.출력 3.종료 : ");
+		}
+		
+		
+	}
+	public void sort(int[] arr) {
+		
+	}
+	
+}

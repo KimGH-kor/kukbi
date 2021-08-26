@@ -1,0 +1,31 @@
+package ch06;
+
+public class Car {
+	class Cars {
+		String number;
+		String name;
+		double speed;
+		
+		public Cars(String number, String name) {
+			this.number = number;
+			this.name = name;
+		}
+		
+		void up(int speed) {
+			this.speed += speed;
+		}
+		
+		double down(int speed) {
+			if(this.speed-speed < 0) {
+				return 0;
+			}
+			this.speed -= speed;
+			return this.speed;
+		}
+	}
+	
+	public static void main(String[] args) {
+		Cars[] cars = new Cars[3];
+		cars[0] = new Cars("1000","¾Æ¹Ý‹ó");
+	}
+}

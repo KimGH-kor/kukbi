@@ -1,0 +1,13 @@
+package ch06;
+
+class SubInfo{
+	String name, id;
+	int passWord;
+}
+
+
+public class SubscriberInfo {
+	public static void main(String[] args) {
+		
+	}
+}

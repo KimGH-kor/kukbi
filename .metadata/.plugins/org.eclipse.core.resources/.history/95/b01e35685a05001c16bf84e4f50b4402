@@ -1,0 +1,11 @@
+package ch06;
+
+public class Car {
+	class Cars {
+		
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+}

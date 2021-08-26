@@ -1,0 +1,34 @@
+package ch06;
+
+public class Car {	
+	public static void main(String[] args) {
+		Cars[] cars = new Cars[3];
+		cars[0] = new Cars("1000","LG");
+		cars[1] = new Cars("1001","±â¾Æ");
+		cars[2] = new Cars("1002","»ï¼º");
+		
+	}
+}
+
+class Cars {
+	String number;
+	String name;
+	double speed;
+	
+	public Cars(String number, String name) {
+		this.number = number;
+		this.name = name;
+	}
+	
+	void up(int speed) {
+		this.speed += speed;
+	}
+	
+	double down(int speed) {
+		if(this.speed-speed < 0) {
+			return 0;
+		}
+		this.speed -= speed;
+		return this.speed;
+	}
+}

@@ -1,0 +1,11 @@
+package ch06;
+
+class Account{
+	String accno;
+	String name;
+	int balance;
+}
+
+public class acount {
+
+}

@@ -1,0 +1,32 @@
+package ch06;
+
+class Account{
+	//속성
+	String accno;
+	String name;
+	int balance;
+	
+	void deposit(int amount) {
+		balance += amount;
+	}
+	void withdraw(int amount) {
+		balance -= amount;
+	}
+}
+
+public class acount {
+	public static void main(String[] args) {
+		//객체 생성
+		Account acc1 = new Account();
+		acc.accno = "1234-1234";
+		acc.name = "김경환";
+		acc.balance = 10000;
+
+		Account acc2 = new Account();
+		acc.accno = "4321-4321";
+		acc.name = "양지현";
+		acc.balance = 20000;
+		
+	}
+
+}

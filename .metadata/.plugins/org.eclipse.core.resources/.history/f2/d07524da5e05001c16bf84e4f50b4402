@@ -1,0 +1,18 @@
+package ch06;
+
+class SubInfo{
+	String name, id, address;
+	int password, phoneNo;
+	
+	public SubInfo(String name, String id, int password){
+		
+	}
+	
+}
+
+
+public class SubscriberInfo {
+	public static void main(String[] args) {
+		
+	}
+}

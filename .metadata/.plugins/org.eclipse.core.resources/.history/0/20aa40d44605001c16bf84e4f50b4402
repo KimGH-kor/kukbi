@@ -1,0 +1,10 @@
+package ch06;
+
+public class Example1 {
+	public static void main(String[] args) {
+		Goods gs = new Goods();
+		gs.goodsCode = "51234";
+		gs.stockNum = 200;
+		gs.addStock(1000);
+	}
+}

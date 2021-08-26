@@ -1,0 +1,35 @@
+package ch06;
+
+class 정육면{
+	int 길이;
+	int 너비;
+	int 높이;
+	int 부피;
+	정육면(){
+		길이 = 1;
+		너비 = 1;
+		높이 = 1;
+	}
+	정육면(int 길이){
+		this.길이 = 길이;
+	}
+	정육면(int 길이, int 너비){
+		this(길이);
+		this.너비 = 너비;
+	}
+	정육면(int 길이, int 너비, int 높이){
+		this(길이, 너비);
+		this.높이 = 높이;
+	}
+	
+	void 부피출력() {
+		System.out.println(부피);
+	}
+	
+}
+
+public class 정육면체 {
+	public static void main(String[] args) {
+		
+	}
+}

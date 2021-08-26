@@ -1,0 +1,26 @@
+package ch06;
+
+public class Car {
+	class Cars {
+		String number;
+		String name;
+		double speed;
+		
+		public Cars(String number, String name) {
+			this.number = number;
+			this.name = name;
+		}
+		
+		void up(int speed) {
+			this.speed += speed;
+		}
+		
+		void down(int speed) {
+			this.speed -= speed;
+		}
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+}

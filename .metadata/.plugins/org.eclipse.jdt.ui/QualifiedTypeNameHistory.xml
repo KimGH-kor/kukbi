@@ -6,8 +6,11 @@
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.HashSet"/>
     <fullyQualifiedTypeName name="java.util.Iterator"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
     <fullyQualifiedTypeName name="ch06.SubInfo"/>
     <fullyQualifiedTypeName name="ch06.정육면"/>
+    <fullyQualifiedTypeName name="ch07.Point"/>
+    <fullyQualifiedTypeName name="ch07.LEC"/>
+    <fullyQualifiedTypeName name="ch07.ATM.Peple"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>

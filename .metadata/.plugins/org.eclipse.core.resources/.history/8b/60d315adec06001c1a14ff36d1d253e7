@@ -1,0 +1,109 @@
+package ch07;
+
+public class RationalNumber {
+	int molecular,denominator;
+	int gcd = 0;
+	
+	//생성자
+	public RationalNumber() {
+		this(1,1);
+	}
+	public RationalNumber(int denominator) {
+		this(1,denominator);
+	}
+	public RationalNumber(int molecular, int denominator){
+		this.denominator = denominator;
+		this.molecular = molecular;
+		GCD(molecular,denominator);
+	}
+	
+	//최대 공약수
+	public void GCD(int molecular, int denominator) {
+		if(molecular < denominator) {
+			for(int i = 1; i <= denominator;i++) {
+				if(molecular%i == 0 && denominator%i ==0) {
+					gcd = i;
+				}
+			}
+		}else {
+			for(int i = 1; i <= molecular;i++) {
+				if(molecular%i == 0 && denominator%i ==0) {
+					gcd = i;
+				}
+			}
+		}
+		this.molecular /=gcd;
+		this.denominator /=gcd;
+	}
+	
+	public static RationalNumber 더하기(RationalNumber a, RationalNumber 리){
+		int i = a.denominator;
+		a.denominator *= 리.denominator;
+		a.molecular *= 리.denominator;
+		리.denominator *= i;
+		리.molecular *= i;
+		RationalNumber 유리 = new RationalNumber((a.molecular+리.molecular),a.denominator);
+		유리.GCD(유리.molecular,유리.denominator);
+		
+		return 유리;
+	}
+	public static RationalNumber 빼기(RationalNumber 유, RationalNumber 리){
+		int i = 유.denominator;
+		유.denominator *= 리.denominator;
+		유.molecular *= 리.denominator;
+		리.denominator *= i;
+		리.molecular *= i;
+		RationalNumber 유리 = new RationalNumber((유.molecular>리.molecular?유.molecular-리.molecular:리.molecular-유.molecular),유.denominator);
+		유리.GCD(유리.molecular,유리.denominator);
+		
+		return 유리;
+	}
+	public static RationalNumber 곱하기(RationalNumber 유, RationalNumber 리){
+		유.denominator *= 리.denominator;
+		유.molecular *= 리.molecular;
+		RationalNumber 유리 = new RationalNumber(유.molecular,유.denominator);
+		유리.GCD(유리.molecular,유리.denominator);
+		
+		return 유리;
+	}
+	public static RationalNumber 나누기(RationalNumber 유, RationalNumber 리){
+		유.denominator *= 리.molecular;
+		유.molecular *= 리.denominator;
+		RationalNumber 유리 = new RationalNumber(유.molecular,유.denominator);
+		유리.GCD(유리.molecular,유리.denominator);
+		
+		return 유리;
+	}
+	
+	//출력
+	public void showInfo() {
+		if(this.denominator >1) {
+			System.out.println(molecular+"/"+denominator);
+		}else {
+			System.out.println(molecular);
+		}
+	}
+	
+	public static void main(String[] args) {
+		RationalNumber 유0 = new RationalNumber(2,3);
+		RationalNumber 유1 = new RationalNumber(4,3);
+		
+		유0.showInfo();
+		유1.showInfo();
+		
+		RationalNumber 유3 = RationalNumber.더하기(유0, 유1);
+		유3.showInfo();
+		RationalNumber 유4 = RationalNumber.빼기(유0, 유1);
+		유4.showInfo();
+		RationalNumber 유5 = RationalNumber.곱하기(유0, 유1);
+		유5.showInfo();
+		RationalNumber 유6 = RationalNumber.나누기(유0, 유1);
+		유6.showInfo();
+
+
+
+
+		
+	}
+}
+

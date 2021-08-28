@@ -1,9 +1,0 @@
-package ch02;
-
-import java.util.Random;
-
-public class toto {
-	public static void main(String[] args) {
-
-	}
-}

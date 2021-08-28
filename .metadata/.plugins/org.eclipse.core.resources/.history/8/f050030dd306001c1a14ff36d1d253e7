@@ -1,0 +1,15 @@
+package ch07;
+
+public class LEC {
+	public static void main(String[] args) {
+		
+		
+	}
+}
+class Point{
+	int a;
+	int b;
+	public Point() {
+		
+	}
+}

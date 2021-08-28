@@ -1,0 +1,50 @@
+package ch07.ATM;
+
+public class Peple {
+	private String card;
+	private String pass;
+	private String name;
+	private int money;
+	
+	public Peple() {
+		
+	}
+	public Peple(String card, String pass, String name, int money) {
+		this.card = card;
+		this.pass = pass;
+		this.name = name;
+		this.money = money;
+	}
+	
+	public void in(int a) {
+		this.money += a;
+	}
+	
+	public String getCard() {
+		return card;
+	}
+	public void setCard(String card) {
+		this.card = card;
+	}
+	public String getPass() {
+		return pass;
+	}
+	public void setPass(String pass) {
+		this.pass = pass;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getMoney() {
+		return money;
+	}
+	public void setMoney(int money) {
+		this.money = money;
+	}
+	
+	
+	
+}

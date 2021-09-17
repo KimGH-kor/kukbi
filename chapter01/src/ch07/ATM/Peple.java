@@ -42,7 +42,7 @@ public class Peple {
 	}
 	//고쳐야함
 	//매게변수 3개만 받고 FIND 메서드를 구현해서 사용
-	public void 송금(Peple[] pepleArr, String card, String pass, int money) {
+	public void 송금(String card, String pass, int money) {
 		int count2 = -1;
 		for (int i = 0; i < pepleArr.length; i++) {
 			if (pepleArr[i].getCard().equals(card)) {
@@ -67,6 +67,17 @@ public class Peple {
 				}	
 			}
 		}
+	
+	public String find(Peple[] pepleArr, String card) {
+		int count2 = -1;
+		for (int i = 0; i < pepleArr.length; i++) {
+			if (pepleArr[i].getCard().equals(card)) {
+				count2 = i;
+				break;
+			}
+		}
+		return "aa";
+	}
 	
 	public String getCard() {
 		return card;

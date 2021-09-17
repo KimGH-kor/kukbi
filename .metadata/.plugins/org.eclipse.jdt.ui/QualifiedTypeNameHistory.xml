@@ -13,4 +13,5 @@
     <fullyQualifiedTypeName name="ch07.LEC"/>
     <fullyQualifiedTypeName name="ch07.ATM.Peple"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="ch07.ATM.ATM"/>
 </qualifiedTypeNameHistroy>

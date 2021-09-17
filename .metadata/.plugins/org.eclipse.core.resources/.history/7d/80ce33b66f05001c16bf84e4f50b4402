@@ -1,8 +1,0 @@
-package ch06;
-
-public class Numbers {
-	int num[];
-	Number(int num[]){
-		this.num = num;
-	}
-}

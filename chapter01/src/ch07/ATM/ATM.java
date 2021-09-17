@@ -109,13 +109,15 @@ public class ATM {
 								for (int i = 0; i < num; i++) {
 									System.out.println(arr[i].getCard() + "/" + arr[i].getName());
 								}
+								
 								System.out.println("송금하실 계좌 번호를 눌러주세요");
 								card = sc.next();
 								System.out.println("지금 계좌의 비밀 번호를 입력해 주세요");
 								pass = sc.next();
 								System.out.println("송금하실 금액을 입력해 주세요");
 								mone = sc.nextInt();
-								arr[count].송금(arr, card, pass, mone);
+								
+								arr[count].송금(card, pass, mone);
 								line();
 								break;
 							case 4:

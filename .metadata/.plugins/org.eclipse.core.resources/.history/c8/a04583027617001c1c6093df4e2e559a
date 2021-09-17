@@ -1,0 +1,25 @@
+package 링크드;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+//학생 정보 처리
+public class HashExample {
+	public static void main(String[] args) {
+		HashMap<String, Student> smap = new HashMap<String, Student>();
+		Scanner sc =new Scanner(System.in);
+		int select = 0;
+		while(select != 3) {
+			
+		}
+		
+		
+	}
+}
+class Student{
+	String code, name;
+	double score;
+	Student(String c, String n, double s){
+		code = c; name=n;score=s;
+	}
+}
